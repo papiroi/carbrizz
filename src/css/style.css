@@ -1,0 +1,123 @@
+body {
+    font-family: 'Montserrat';
+    color: #263242;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    /* Set the hr color */
+    color: #CF1818;  /* old IE */
+    background-color: #CF1818;
+    opacity: 100;
+}
+
+h1 h2 .text-bold {
+    font-weight: 700;
+}
+
+.bg-dark {
+    background-color: #263242;
+}
+
+.opacity-85 {
+    opacity: 85%;
+}
+
+.bg-background-mountain {
+    background-image: url("../img/mountain.png");
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.bg-explore {
+    background-color: #F3E8EE;
+}
+
+#red-car {
+    max-width: 50%;
+    position: absolute;
+    bottom: 20;
+    left: 0;
+    animation: slideFadeIn 0.8s ease-out forwards;
+}
+
+#blue-car {
+    transform: scaleX(-1);
+    max-width: 50%;
+    position: absolute;
+    bottom: 20;
+    right: 0;
+    animation: slideFadeInFlipped 0.8s ease-out forwards;
+}
+
+#carFilter {
+    font-size: 0.75rem;
+}
+
+.bg-background-driving {
+    background-image: linear-gradient(to right, rgba(255,255,255,0) 20%,
+              rgba(255,255,255,1)), url("../img/driving-car.png");
+    background-size: cover;
+    background-position: center bottom;
+    transform: scaleX(-1);
+}
+
+.circle {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border: 3px solid #E84855;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+}
+
+.image-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 75%;              /* Width of the fade */
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,0.95) 20%,
+        rgba(255,255,255,0.6) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    pointer-events: none;
+}
+
+
+/* 2. Create the keyframe sequence */
+@keyframes slideFadeInFlipped {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scaleX(-1); /* Starts 30px lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleX(-1);    /* Moves to its final position */
+  }
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Starts 30px lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);    /* Moves to its final position */
+  }
+}
+
