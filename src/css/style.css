@@ -45,7 +45,6 @@ h1 h2 .text-bold {
 
 #red-car {
     max-width: 50%;
-    position: absolute;
     bottom: 20;
     left: 0;
     animation: slideFadeIn 0.8s ease-out forwards;
@@ -54,7 +53,6 @@ h1 h2 .text-bold {
 #blue-car {
     transform: scaleX(-1);
     max-width: 50%;
-    position: absolute;
     bottom: 20;
     right: 0;
     animation: slideFadeInFlipped 0.8s ease-out forwards;
