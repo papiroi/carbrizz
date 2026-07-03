@@ -12,6 +12,15 @@ hr {
     opacity: 100;
 }
 
+.footer hr {
+    border: none;
+    height: 3px;
+    /* Set the hr color */
+    color: #DDD;  /* old IE */
+    background-color: #DDD;
+    opacity: 100;
+}
+
 h1 h2 .text-bold {
     font-weight: 700;
 }
